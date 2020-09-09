@@ -1,0 +1,57 @@
+     .container {
+         width:100%;
+         height:20vw;
+     }
+     .container-small {
+         float:left;
+         width:33.33%;
+         height 20vw;
+     }
+     .container-smallr {
+         float:right;
+         width:33.33%;
+         height 20vw;
+     }
+     .width33 {
+         float: left;
+         width: 33.33%;
+         height:20vw;
+     }
+    .width33r {
+         float: right;
+         width: 33.33%;
+         height:20vw;
+     }
+     .width66 {
+         float: left;
+         width: 66.66%;
+         height:20vw;
+     }
+     .height25 {
+         float: left;
+         width: 33.33%;
+         height:5vw;
+     }
+     .height25-container-small {
+         float: left;
+         width: 100%;
+         height:5vw;
+     }
+     .height33 {
+         float: left;
+         width: 33.33%;
+         height:6.6667vw;
+     }
+     .height33-container-small{
+         float:left;
+         width:100%;
+         height:6.6667vw;
+     }
+     .height50 {
+         float: left;
+         width: 33.33%;
+         height: 10vw;
+     }
+     .clear-float{
+         clear:both;
+     }
