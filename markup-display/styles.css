@@ -1,0 +1,26 @@
+.width33 {
+    display:inline-block;
+    width: 33.33%;
+    height:20vw;
+}
+.width66 {
+    display:inline-block;
+    width: 66.66%;
+    height:20vw;
+}
+.height25 {
+    display:block;
+    height:5vw;
+}
+.height33 {
+    display:block;
+    height:6.6667vw;
+}
+.height50 {
+    display:block;
+    height: 10vw;
+}
+.container {
+    width:100%;
+    margin-top:-4px;
+}

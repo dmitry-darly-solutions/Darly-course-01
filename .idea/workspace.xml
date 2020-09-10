@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e4c0c8a9-b97a-476c-8f8c-252bf4804d63" name="Default Changelist" comment="" />
+    <list default="true" id="e4c0c8a9-b97a-476c-8f8c-252bf4804d63" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/markup-display/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/markup-display/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/markup-float/styles.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,7 +37,7 @@
       <option name="presentableId" value="Default" />
       <updated>1599732923282</updated>
       <workItem from="1599732924514" duration="26000" />
-      <workItem from="1599732991301" duration="1158000" />
+      <workItem from="1599732991301" duration="1513000" />
     </task>
     <servers />
   </component>
@@ -49,10 +53,10 @@
       <screen x="48" y="23" width="1232" height="777" />
     </state>
     <state x="172" y="90" key="MergeDialog/48.23.1232.777@48.23.1232.777" timestamp="1599732948422" />
-    <state x="302" y="180" key="MultipleFileMergeDialog" timestamp="1599732948454">
+    <state x="302" y="180" key="MultipleFileMergeDialog" timestamp="1599735002945">
       <screen x="48" y="23" width="1232" height="777" />
     </state>
-    <state x="302" y="180" key="MultipleFileMergeDialog/48.23.1232.777@48.23.1232.777" timestamp="1599732948454" />
+    <state x="302" y="180" key="MultipleFileMergeDialog/48.23.1232.777@48.23.1232.777" timestamp="1599735002945" />
     <state x="462" y="152" key="VcsDiffUtil.ChangesDialog" timestamp="1599734388557">
       <screen x="48" y="23" width="1232" height="777" />
     </state>
