@@ -1,0 +1,173 @@
+body {
+    height:1000px;
+    background-image: linear-gradient(red, yellow, blue);
+}
+.trapezoid-left {
+    height: 90px;
+    width: 90px;
+    background: ;
+    border: solid 50px;
+    border-color: transparent rgb(190,190,190) transparent transparent;
+    margin: -337px 1px 1px 69px;
+    display:block;
+}
+.trapezoid-right {
+    height: 90px;
+    width: 90px;
+    background: ;
+    border: solid 50px;
+    border-color: transparent transparent  transparent rgb(190,190,190);
+    margin: -200px 1px 14px 350px;
+    display:inline-block;
+}
+.trapezoid-top {
+    height: 90px;
+    width: 90px;
+    background: ;
+    border: solid 50px;
+    border-color: transparent transparent rgb(190,190,190) transparent;
+    margin: -130px 1px 1px 210px;
+    display:block;
+}
+.trapezoid-bottom {
+    height: 90px;
+    width: 90px;
+    background: ;
+    border: solid 50px;
+    border-color: rgb(190,190,190) transparent  transparent transparent;
+    margin: 93px 1px 0px 212px;
+    display:inline-block;
+}
+.circle {
+    height: 80px;
+    width: 80px;
+    background-color:;
+    border:41px solid rgb(190,190,190);
+    border-radius:100%;
+    display:inline-block;
+    margin: -192px 1px 70px 225px;
+}
+.container-nut {
+    width:400px;
+    height:400px;
+    background-color: ;
+    overflow: hidden;
+}
+.container-nut-cut {
+    width:340px;
+    height:210px;
+    background-color: ;
+    overflow: hidden;
+    transform: rotate(-45deg);
+    margin:-250px 1px 70px 350px;
+}
+.triangle-right {
+    height: 0px;
+    width: 200px;
+    background: ;
+    border: solid 50px;
+    border-color: transparent rgb(190,190,190) transparent transparent;
+    margin: -325px 0px 1px 402px;
+    display:block;
+    transform: scale(1.05,1.05);
+}
+.triangle-left {
+    height: 0px;
+    width: 90px;
+    background: ;
+    border: solid 50px;
+    border-color: transparent rgb(190,190,190) transparent transparent;
+    margin: -87px 0px 1px 532px;
+    display:block;
+    transform:scale(1.05,1.05) rotate(270deg);
+}
+.handle {
+    height:400px;
+    width:90px;
+    background-color: rgb(190,190,190);
+    margin:-89px 0px 0px 400px;
+    transform: rotate(45deg);
+}
+.wranch-ring {
+    height: 50px;
+    width: 50px;
+    background-color:;
+    border:41px solid rgb(190,190,190);
+    border-radius:100%;
+    margin:-90px 0px 0px 210px;
+}
+.bolt-container {
+    margin: 50px ;
+}
+.bolt-thread-1 {
+    border-top: 20px solid rgb(157,157,157);
+    border-radius: 90px 1px 1px 1px;
+    top: -12px;
+    left: -9px;
+    width: 150px;
+    height: 150px;
+    transform: rotate(90deg);
+    margin: 50px 10px -164px 80px;
+    display:inline-block;
+}
+.bolt-thread-2 {
+    border-top: 20px solid rgb(157,157,157);
+    border-radius: 90px 1px 1px 1px;
+    top: -12px;
+    left: -9px;
+    width: 150px;
+    height: 150px;
+    transform: rotate(90deg);
+    margin: 50px 10px -164px -35px;
+    display:inline-block;
+}
+.bolt-thread-3 {
+    border-top: 20px solid rgb(157,157,157);
+    border-radius: 90px 1px 1px 1px;
+    top: -12px;
+    left: -9px;
+    width: 150px;
+    height: 150px;
+    transform: rotate(90deg);
+    margin: 50px 10px -164px -35px;
+    display:inline-block;
+}
+.bolt-thread-4 {
+    border-top: 20px solid rgb(157,157,157);
+    border-radius: 90px 1px 1px 1px;
+    top: -12px;
+    left: -9px;
+    width: 150px;
+    height: 150px;
+    transform: rotate(90deg);
+    margin: 50px 10px -164px -35px;
+    display:inline-block;
+}
+.bolt-rod {
+    width: 500px;
+    height: 150px;
+    background-color: rgb(190,190,190);
+    margin: 0px 0px 1px 150px ;
+    display:inline-block;
+}
+.bolt-head {
+    width: 130px;
+    height: 300px;
+    background-color: rgb(190, 190, 190);
+    margin:-230px 0px 0px 20px;
+    border-radius: 30px 1px 1px 40px;
+}
+.bolt-head-circle-1 {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(190, 190, 190);
+    margin:-150px 0px 0px -10px;
+    border-radius: 100%;
+}
+.bolt-head-circle-2 {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(190, 190, 190);
+    margin:-300px 0px 0px -10px;
+    border-radius: 100%;
+}
