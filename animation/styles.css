@@ -1,0 +1,150 @@
+.animation-container {
+    margin: 100px auto;
+    width: 500px;
+}
+.container-border {
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+}
+.container-border:after {
+    content: "";
+    background: linear-gradient(45deg, rgb(199,199,199) 50%, rgb(15,107,190) 50%);
+    background-size: 200% 200%;
+    border-radius: 10px;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    height: 102%;
+    width: 102%;
+    z-index: -1;
+    animation: border-animation 10s linear alternate infinite;
+}
+.darts-circle{
+    stroke:black;
+    stroke-width:3;
+    fill:purple;
+}
+.darts-inner-circle-1 {
+    stroke:black;
+    stroke-width:3;
+    stroke-dasharray: 10 10 10 10;
+    fill:green;
+}
+.darts-inner-circle-2 {
+    stroke:black;
+    stroke-width:3;
+    stroke-dasharray: 10 10 10 10;
+    fill:purple;
+}
+.darts-inner-circle-3 {
+    stroke:black;
+    stroke-width:3;
+    stroke-dasharray: 10 10 10 10;
+    fill:green;
+}
+.darts-inner-circle-4 {
+    stroke:black;
+    stroke-width:3;
+    fill:red;
+}
+.darts-bulls-eye {
+    font-size: 10px;
+    fill:black;
+}
+.dart {
+    stroke:#00ff00;
+    stroke-width:3;
+}
+.person {
+    stroke:black;
+    stroke-width:3;
+    fill:rgb(255,224,189);
+}
+.sun {
+    stroke:black;
+    stroke-width:3;
+    fill:rgb(252,212,64);
+    animation: sun-animation 4s ease infinite ;
+}
+.person-right-hand {
+    animation:person-throw 10s linear infinite ;
+}
+.dart {
+    opacity: 0;
+    animation:dart-show 10s linear infinite;
+}
+.darts{
+
+    animation:darts-move 10s linear infinite;
+}
+@keyframes darts-move {
+    0%{
+        transform: translate(-500px);
+    }
+    20%{
+        transform: translate(10px);
+    }
+    100%{
+        transform: translate(10px);
+    }
+}
+@keyframes dart-show {
+    0%{
+    }
+    19%{
+        opacity:0;
+    }
+    20%{
+        opacity: 1;
+    }
+    21% {
+        transform:translate(0px,0px);
+    }
+    22%{
+        transform:translate(80px,-50px);
+        opacity: 1;
+    }
+    50% {
+        transform:translate(110px,-50px) rotate(-2deg);
+        opacity: 1;
+    }
+    100% {
+        transform:translate(110px,-50px) rotate(-2deg);
+        opacity: 1;
+    }
+}
+
+@keyframes person-throw {
+    20%{
+        transform: translate(10px,-120px);
+    }
+    50%{
+        transform: translate(10px,-120px);
+    }
+}
+@keyframes sun-animation {
+    0%{
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.11);
+    }
+    50% {
+        transform: scale(1.08);
+    }
+    75%{
+        transform: scale(1.13);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes border-animation {
+    0% {
+        background-position:0% 100%;
+    }
+    50% {
+        background-position:100% 0%;
+    }
+}
