@@ -7,13 +7,14 @@
 <body>
 <h2>Accordion</h2>
 <button class="accordion"> Join all elements</button>
-<br class="panel">
+<div class="panel">
 <input type="text" id="element-join"></input>
 <input type="button" id="button1" value="Add" onclick="addElementToArray();"></input>
 <input type="button" id="button1" value="Separator" onclick="addSeparator();"></input>
 <input type="button" id="button2" value="Display" onclick="displayArray();"></input>
 </br><span>Result array:</span><span id="result-element-join"></span>
 </div>
+
 <button class="accordion">Sum of two</button>
 <div class="panel">
     <input type="text" id="element-sum"></input>
@@ -48,5 +49,6 @@
     <input type="button" id="button2" value="Create(From,To)" onclick="createArrayBetween();"></input>
     </br><span>Array:</span><span id="array-between"></span>
 </div>
+<script src="accordion.js"></script>
 </body>
 </html>
