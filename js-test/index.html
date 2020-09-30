@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: center;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+        .active, .accordion:hover {
+            background-color: #ccc;
+            transform: scale(1.01);
+        }
+
+        .panel {
+            padding: 0 18px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Accordion</h2>
+
+<button class="accordion"> Join all elements</button>
+<br class="panel">
+    <input type="text" id="element-join"></input>
+    <input type="button" id="button1" value="Add" onclick="addElementToArray();"></input>
+    <input type="button" id="button1" value="Separator" onclick="addSeparator();"></input>
+    <input type="button" id="button2" value="Display" onclick="displayArray();"></input>
+    </br><span>Result array:</span><span id="result-element-join"></span>
+</div>
+
+<button class="accordion">Sum of two</button>
+<div class="panel">
+    <input type="text" id="element-sum"></input>
+    <input type="button" id="button-sum-1" value="Add to first" onclick="addElementToArrayFirst();"></input>
+    <input type="button" id="button-sum-2" value="Add to second" onclick="addElementToArraySecond();"></input>
+    <input type="button" id="button-sum-3" value="Display sum" onclick="displayArrayAll();"></input>
+    </br><span>1 array:</span><span id="result-sum-1"></span>
+    </br><span>2 array:</span><span id="result-sum-2"></span>
+    </br><span>+ array:</span><span id="result-element-sum"></span>
+</div>
+
+<button class="accordion">Move an element</button>
+<div class="panel">
+    <input type="text" id="element-move"></input>
+    <input type="button" id="button1" value="Add" onclick="addElementToArrayMove();"></input>
+    <input type="button" id="button2" value="Move(From,To)" onclick="moveElement();"></input>
+    </br><span>Before array:</span><span id="move-before"></span>
+    </br><span>After array:</span><span id="move-after"></span>
+</div>
+
+<button class="accordion">Merge two arrays(set)</button>
+<div class="panel">
+    <input type="text" id="element-merge"></input>
+    <input type="button" id="button-merge-1" value="Add to first" onclick="addElementFirstMerge();"></input>
+    <input type="button" id="button-merge-2" value="Add to second" onclick="addElementSecondMerge();"></input>
+    <input type="button" id="button-merge-3" value="Merge" onclick="displayArrayMerge();"></input>
+    </br><span>1 array:</span><span id="result-merge-1"></span>
+    </br><span>2 array:</span><span id="result-merge-2"></span>
+    </br><span>& array:</span><span id="result-merge"></span>
+</div>
+<button class="accordion">Array between two integers</button>
+<div class="panel">
+    <input type="text" id="element-between"></input>
+    <input type="button" id="button2" value="Create(From,To)" onclick="createArrayBetween();"></input>
+    </br><span>Array:</span><span id="array-between"></span>
+</div>
+<script>
+    let acc = document.getElementsByClassName('accordion');
+    let i;
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener('click', function() {
+            this.classList.toggle('active');
+            let panel = this.nextElementSibling;
+            if (panel.style.display === 'block') {
+                panel.style.display = 'none';
+            } else {
+                panel.style.display = 'block';
+            }
+        });
+    }
+    //-------------------------------------------------
+    let separator;
+    let counterSeparate = 0;
+    let array = [];
+    function addElementToArray() {
+        array[counterSeparate] = document.getElementById('element-join').value;
+        displayArray();
+        counterSeparate++;
+    }
+    function addSeparator() {
+        separator = document.getElementById('element-join').value;
+    }
+    function displayArray() {
+        document.getElementById('result-element-join').innerHTML = array.join(separator);
+    }
+    //-------------------------------------------------
+    let counterFirst = 0, counterSecond = 0;
+    let arrayFirst = [], arraySecond = [], arraySum = [] ;
+    const elementSum = document.getElementById('element-sum');
+    function addElementToArrayFirst() {
+        arrayFirst[counterFirst] = elementSum.value;
+        document.getElementById('result-sum-1').innerHTML = arrayFirst.join();
+        counterFirst++;
+    }
+    function addElementToArraySecond() {
+        arraySecond[counterSecond] = elementSum.value;
+        document.getElementById('result-sum-2').innerHTML = arraySecond.join();
+        counterSecond++;
+    }
+    function displayArrayAll() {
+        let length = (arrayFirst.length >= arraySecond.length) ? arrayFirst.length : arraySecond.length;
+        for ( let counterSum = 0; counterSum < length; counterSum++) {
+            arraySum[counterSum] = (+arrayFirst[counterSum] || 0) + (+arraySecond[counterSum] || 0);
+            document.getElementById('result-element-sum').innerHTML = arraySum.join();
+        }
+    }
+    //---------------------------------------------------
+    let moveCounter = 0;
+    let arrayBefore = [], arrayAfter = [], arrayFromTo = [] ;
+    let fromPos, toPos, element;
+
+    function addElementToArrayMove() {
+        arrayBefore[moveCounter] = document.getElementById('element-move').value;
+        displayArrayMoveBefore();
+        moveCounter++;
+    }
+    function moveElement() {
+        arrayFromTo = document.getElementById('element-move').value;
+        arrayFromTo = (arrayFromTo.toString()).split(',');
+        fromPos = arrayFromTo[0];
+        toPos = arrayFromTo[1];
+        fromPositionToAnother(fromPos,toPos);
+        displayArrayMoveAfter();
+    }
+    function fromPositionToAnother(fromPosition,toPosition) {
+        if(fromPosition<0) {
+            fromPosition = arrayBefore.length - Math.abs(fromPosition);
+        }
+        if(toPosition<0) {
+            toPosition = arrayBefore.length - Math.abs(toPosition);
+        }
+        console.log(fromPosition,toPosition);
+        element = arrayBefore[fromPosition];
+        arrayAfter = arrayBefore.slice();
+        arrayAfter.splice(fromPosition,1);
+        arrayAfter.splice(toPosition,0,element);
+        console.log(element);
+    }
+    function displayArrayMoveBefore() {
+        document.getElementById('move-before').innerHTML = arrayBefore.join();
+    }
+    function displayArrayMoveAfter() {
+        document.getElementById('move-after').innerHTML = arrayAfter.join();
+    }
+    //------------------------------------------------------
+    let counterFirstMerge = 0, counterSecondMerge = 0;
+    let arrayFirstMerge = [], arraySecondMerge = [], arrayMerge = [] ;
+    const elementSumMerge = document.getElementById('element-merge');
+    function addElementFirstMerge() {
+        arrayFirstMerge[counterFirstMerge] = elementSumMerge.value;
+        document.getElementById('result-merge-1').innerHTML = arrayFirstMerge.join();
+        counterFirstMerge++;
+    }
+    function addElementSecondMerge() {
+        arraySecondMerge[counterSecondMerge] = elementSumMerge.value;
+        document.getElementById('result-merge-2').innerHTML = arraySecondMerge.join();
+        counterSecondMerge++;
+    }
+    function displayArrayMerge() {
+        arrayMerge = arrayFirstMerge.concat(arraySecondMerge);
+        arrayMerge = arrayMerge.filter((item,index) => {
+           return arrayMerge.indexOf(item)===index;
+    });
+        document.getElementById('result-merge').innerHTML = arrayMerge.join();
+    }
+    //------------------------------------------------------
+    let arrayBetween = [], arrayResult = [];
+    let fromPosBetween, toPosBetween;
+    function createArrayBetween() {
+        arrayBetween = document.getElementById('element-between').value;
+        arrayBetween = (arrayBetween.toString()).split(',');
+        fromPosBetween = arrayBetween[0];
+        toPosBetween = arrayBetween[1];
+        fromPositionToAnotherBetween(fromPosBetween,toPosBetween);
+        displayArrayBetween();
+    }
+    function fromPositionToAnotherBetween(fromPositionBetween,toPositionBetween) {
+        for(let i = fromPositionBetween,m = 0; i <= toPositionBetween;i++,m++ ){
+            arrayResult[m]=i;
+        }
+    }
+    function displayArrayBetween() {
+        document.getElementById('array-between').innerHTML = arrayResult.join();
+    }
+</script>
+
+</body>
+</html>
