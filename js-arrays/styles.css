@@ -7,28 +7,24 @@
     text-align: center;
     outline: none;
     font-size: 15px;
-    transition:transform 0.4s;
+    transition: transform 0.4s;
     overflow: hidden;
 }
-
-.active, .accordion:hover {
+.active,
+.accordion:hover {
     background-color: #ccc;
     transform: scale(1.01);
 }
-
 .panel {
     padding: 0;
     background-color: white;
     align-items: center;
     text-align: center;
     max-height: 0;
-    transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+    transition: max-height 1s cubic-bezier(0, 1, 0, 1);
     overflow: hidden;
     background: #d5d5d5;
-
 }
 #accordionContainer .show {
     max-height: 500px;
-}
-
 }
