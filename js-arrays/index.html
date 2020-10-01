@@ -1,6 +1,8 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
+    <meta charset="utf-8"/>
+    <title>JS</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -8,7 +10,7 @@
     <div class="accordionSegment">
         <button class="accordion"> Join all elements</button>
         <div class="panel">
-            <input type="text" id="element-join"></input>
+            <input type="text" id="element-join">
             <button onclick="addElementToArray();">Add</button>
             <button onclick="addSeparator();">Separator</button>
             <button onclick="displayArray();">Display</button>
@@ -21,25 +23,25 @@
     <div class="accordionSegment">
         <button class="accordion">Sum of two</button>
         <div class="panel">
-            <input type="text" id="element-sum"></input>
+            <input type="text" id="element-sum">
             <button onclick="addElementToArrayFirst();">Add to first</button>
-            <button onclick="addElementToArraySecond();">Add to second</input>
-                <button onclick="displayArrayAll();">Display sum</button>
-                <div class="result">
-                    <span>1 array:</span><span id="result-sum-1"></span>
-                </div>
-                <div class="result">
-                    <span>2 array:</span><span id="result-sum-2"></span>
-                </div>
-                <div class="result">
-                    <span>+ array:</span><span id="result-element-sum"></span>
-                </div>
+            <button onclick="addElementToArraySecond();">Add to second</button>
+            <button onclick="displayArrayAll();">Display sum</button>
+            <div class="result">
+                <span>1 array:</span><span id="result-sum-1"></span>
+            </div>
+            <div class="result">
+                <span>2 array:</span><span id="result-sum-2"></span>
+            </div>
+            <div class="result">
+                <span>+ array:</span><span id="result-element-sum"></span>
+            </div>
         </div>
     </div>
     <div class="accordionSegment">
         <button class="accordion">Move an element</button>
         <div class="panel">
-            <input type="text" id="element-move"></input>
+            <input type="text" id="element-move">
             <button onclick="addElementToArrayMove();">Add</button>
             <button onclick="moveElement();">Move(From,To)</button>
             <div class="result">
@@ -53,7 +55,7 @@
     <div class="accordionSegment">
         <button class="accordion">Merge two arrays(set)</button>
         <div class="panel">
-            <input type="text" id="element-merge"></input>
+            <input type="text" id="element-merge">
             <button onclick="addElementFirstMerge();">Add to first</button>
             <button onclick="addElementSecondMerge();">Add to second</button>
             <button onclick="displayArrayMerge();">Merge</button>
@@ -71,7 +73,7 @@
     <div class="accordionSegment">
         <button class="accordion">Array between two integers</button>
         <div class="panel">
-            <input type="text" id="element-between"></input>
+            <input type="text" id="element-between">
             <button onclick="createArrayBetween();">Create(From,To)</button>
             <div class="result">
                 <span>Array:</span><span id="array-between"></span>
