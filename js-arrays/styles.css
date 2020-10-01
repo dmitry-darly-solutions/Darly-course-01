@@ -21,3 +21,6 @@
     background-color: white;
     overflow: hidden;
 }
+#accordionContainer .show {
+    display: block;
+}

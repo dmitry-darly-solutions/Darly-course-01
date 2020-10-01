@@ -1,53 +1,52 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<h2>Accordion</h2>
-<button class="accordion"> Join all elements</button>
-<div class="panel">
-<input type="text" id="element-join"></input>
-<input type="button" id="button1" value="Add" onclick="addElementToArray();"></input>
-<input type="button" id="button1" value="Separator" onclick="addSeparator();"></input>
-<input type="button" id="button2" value="Display" onclick="displayArray();"></input>
-</br><span>Result array:</span><span id="result-element-join"></span>
-</div>
-
-<button class="accordion">Sum of two</button>
-<div class="panel">
-    <input type="text" id="element-sum"></input>
-    <input type="button" id="button-sum-1" value="Add to first" onclick="addElementToArrayFirst();"></input>
-    <input type="button" id="button-sum-2" value="Add to second" onclick="addElementToArraySecond();"></input>
-    <input type="button" id="button-sum-3" value="Display sum" onclick="displayArrayAll();"></input>
-    </br><span>1 array:</span><span id="result-sum-1"></span>
-    </br><span>2 array:</span><span id="result-sum-2"></span>
-    </br><span>+ array:</span><span id="result-element-sum"></span>
-</div>
-<button class="accordion">Move an element</button>
-<div class="panel">
-    <input type="text" id="element-move"></input>
-    <input type="button" id="button1" value="Add" onclick="addElementToArrayMove();"></input>
-    <input type="button" id="button2" value="Move(From,To)" onclick="moveElement();"></input>
-    </br><span>Before array:</span><span id="move-before"></span>
-    </br><span>After array:</span><span id="move-after"></span>
-</div>
-<button class="accordion">Merge two arrays(set)</button>
-<div class="panel">
-    <input type="text" id="element-merge"></input>
-    <input type="button" id="button-merge-1" value="Add to first" onclick="addElementFirstMerge();"></input>
-    <input type="button" id="button-merge-2" value="Add to second" onclick="addElementSecondMerge();"></input>
-    <input type="button" id="button-merge-3" value="Merge" onclick="displayArrayMerge();"></input>
-    </br><span>1 array:</span><span id="result-merge-1"></span>
-    </br><span>2 array:</span><span id="result-merge-2"></span>
-    </br><span>& array:</span><span id="result-merge"></span>
-</div>
-<button class="accordion">Array between two integers</button>
-<div class="panel">
-    <input type="text" id="element-between"></input>
-    <input type="button" id="button2" value="Create(From,To)" onclick="createArrayBetween();"></input>
-    </br><span>Array:</span><span id="array-between"></span>
+<div id ="accordionContainer">
+    <button class="accordion"> Join all elements</button>
+    <div class="panel">
+        <input type="text" id="element-join"></input>
+        <button onclick="addElementToArray();">Add</button>
+        <button onclick="addSeparator();">Separator</button>
+        <button onclick="displayArray();">Display</button>
+        </br><span>Result array:</span><span id="result-element-join"></span>
+    </div>
+    <button class="accordion">Sum of two</button>
+    <div class="panel">
+        <input type="text" id="element-sum"></input>
+        <button onclick="addElementToArrayFirst();">Add to first</button>
+        <button onclick="addElementToArraySecond();">Add to second</input>
+            <button onclick="displayArrayAll();">Display sum</button>
+            </br><span>1 array:</span><span id="result-sum-1"></span>
+            </br><span>2 array:</span><span id="result-sum-2"></span>
+            </br><span>+ array:</span><span id="result-element-sum"></span>
+    </div>
+    <button class="accordion">Move an element</button>
+    <div class="panel">
+        <input type="text" id="element-move"></input>
+        <button onclick="addElementToArrayMove();">Add</button>
+        <button onclick="moveElement();">Move(From,To)</button>
+        </br><span>Before array:</span><span id="move-before"></span>
+        </br><span>After array:</span><span id="move-after"></span>
+    </div>
+    <button class="accordion">Merge two arrays(set)</button>
+    <div class="panel">
+        <input type="text" id="element-merge"></input>
+        <button onclick="addElementFirstMerge();">Add to first</button>
+        <button onclick="addElementSecondMerge();">Add to second</button>
+        <button onclick="displayArrayMerge();">Merge</button>
+        </br><span>1 array:</span><span id="result-merge-1"></span>
+        </br><span>2 array:</span><span id="result-merge-2"></span>
+        </br><span>& array:</span><span id="result-merge"></span>
+    </div>
+    <button class="accordion">Array between two integers</button>
+    <div class="panel">
+        <input type="text" id="element-between"></input>
+        <button onclick="createArrayBetween();">Create(From,To)</button>
+        </br><span>Array:</span><span id="array-between"></span>
+    </div>
 </div>
 <script src="accordion.js"></script>
 </body>

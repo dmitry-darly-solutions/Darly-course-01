@@ -1,13 +1,11 @@
-let acc = document.getElementsByClassName('accordion');
-let i;
-for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener('click', function() {
-        this.classList.toggle('active');
-        let panel = this.nextElementSibling;
-        if (panel.style.display === 'block') {
-            panel.style.display = 'none';
-        } else {
-            panel.style.display = 'block';
-        }
-    });
+document.getElementById('accordionContainer').addEventListener("click",doSmth);
+function doSmth(event) {
+    let target = event.target;
+    if (target.className == 'accordion') {
+        console.dir(target);
+        highlight(target.nextElementSibling);
+    }
+}
+function highlight(node) {
+    node.classList.toggle('show');
 }
