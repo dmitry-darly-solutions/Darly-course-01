@@ -1,11 +1,6 @@
-document.getElementById('accordionContainer').addEventListener("click",doSmth);
-function doSmth(event) {
+document.getElementById('accordionContainer').addEventListener('click', (event) => {
     let target = event.target;
     if (target.className == 'accordion') {
-        console.dir(target);
-        highlight(target.nextElementSibling);
+        target.nextElementSibling.classList.toggle('show');
     }
-}
-function highlight(node) {
-    node.classList.toggle('show');
-}
+});
