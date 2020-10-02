@@ -1,17 +1,12 @@
-let moveCounter = 0;
-let arrayBefore = [], arrayAfter = [], arrayFromTo = [] ;
-let fromPos, toPos, element;
+const arrayBefore = [];
+let arrayAfter = [], arrayFromTo = [];
 function addElementToArrayMove() {
-    arrayBefore[moveCounter] = document.getElementById('element-move').value;
+    arrayBefore.push(document.getElementById('element-move').value);
     displayArrayMoveBefore();
-    moveCounter++;
 }
 function moveElement() {
-    arrayFromTo = document.getElementById('element-move').value;
-    arrayFromTo = (arrayFromTo.toString()).split(',');
-    fromPos = arrayFromTo[0];
-    toPos = arrayFromTo[1];
-    fromPositionToAnother(fromPos,toPos);
+    arrayFromTo = (document.getElementById('element-move').value).split(',');
+    fromPositionToAnother(arrayFromTo[0],arrayFromTo[1]);
     displayArrayMoveAfter();
 }
 function fromPositionToAnother(fromPosition,toPosition) {
@@ -21,12 +16,9 @@ function fromPositionToAnother(fromPosition,toPosition) {
     if(toPosition<0) {
         toPosition = arrayBefore.length - Math.abs(toPosition);
     }
-    console.log(fromPosition,toPosition);
-    element = arrayBefore[fromPosition];
     arrayAfter = arrayBefore.slice();
     arrayAfter.splice(fromPosition,1);
-    arrayAfter.splice(toPosition,0,element);
-    console.log(element);
+    arrayAfter.splice(toPosition,0,arrayBefore[fromPosition]);
 }
 function displayArrayMoveBefore() {
     document.getElementById('move-before').innerHTML = arrayBefore.join();
