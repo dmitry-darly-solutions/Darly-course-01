@@ -7,9 +7,9 @@ function addElementToArrayFirst() {
 function addElementToArraySecond() {
     arraySecond.push(elementSum.value);
     document.getElementById('result-sum-2').innerHTML = arraySecond.join();
-}
+}   
 function displayArrayAll() {
-    let length = Math.max(arrayFirst.length,arraySecond.length);
+    const length = Math.max(arrayFirst.length,arraySecond.length);
     for ( let counterSum = 0; counterSum < length; counterSum++) {
         arraySum[counterSum] = (+arrayFirst[counterSum] || 0) + (+arraySecond[counterSum] || 0);
         document.getElementById('result-element-sum').innerHTML = arraySum.join();
