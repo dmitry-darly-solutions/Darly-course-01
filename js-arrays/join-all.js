@@ -1,10 +1,8 @@
 let separator;
-let counterSeparate = 0;
-let array = [];
+const array = [];
 function addElementToArray() {
-    array[counterSeparate] = document.getElementById('element-join').value;
+    array.push(document.getElementById('element-join').value);
     displayArray();
-    counterSeparate++;
 }
 function addSeparator() {
     separator = document.getElementById('element-join').value;
