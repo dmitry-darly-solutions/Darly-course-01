@@ -9,7 +9,7 @@ function moveElement() {
     const fromPosition = arrayFromTo[0];
     const toPosition = arrayFromTo[1];
     if(isNaN(fromPosition)||isNaN(toPosition)) {
-        return alert(fromPosition + " or " + toPosition+ " is not a number");
+        return alert(`${fromPosition} or  ${toPosition} is not a number`);
     }
     fromPositionToAnother(fromPosition,toPosition);
     displayArrayMoveAfter();
