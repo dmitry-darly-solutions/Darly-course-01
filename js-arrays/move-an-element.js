@@ -1,11 +1,11 @@
 const arrayBefore = [];
-let arrayAfter = [], arrayFromTo = [];
+let arrayAfter = [];
 function addElementToArrayMove() {
     arrayBefore.push(document.getElementById('element-move').value);
     displayArrayMoveBefore();
 }
 function moveElement() {
-    arrayFromTo = (document.getElementById('element-move').value).split(',');
+    const arrayFromTo = (document.getElementById('element-move').value).split(',');
     const fromPosition = arrayFromTo[0];
     const toPosition = arrayFromTo[1];
     if(isNaN(fromPosition)||isNaN(toPosition)) {
