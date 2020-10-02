@@ -6,7 +6,12 @@ function addElementToArrayMove() {
 }
 function moveElement() {
     arrayFromTo = (document.getElementById('element-move').value).split(',');
-    fromPositionToAnother(arrayFromTo[0],arrayFromTo[1]);
+    const fromPosition = arrayFromTo[0];
+    const toPosition = arrayFromTo[1];
+    if(isNaN(fromPosition)||isNaN(toPosition)) {
+        return alert(fromPosition + " or " + toPosition+ " is not a number");
+    }
+    fromPositionToAnother(fromPosition,toPosition);
     displayArrayMoveAfter();
 }
 function fromPositionToAnother(fromPosition,toPosition) {
