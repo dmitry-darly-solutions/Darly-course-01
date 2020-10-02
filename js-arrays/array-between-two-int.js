@@ -1,11 +1,7 @@
-let arrayBetween = [], arrayResult = [];
-let fromPosBetween, toPosBetween;
+const arrayResult = [];
 function createArrayBetween() {
-    arrayBetween = document.getElementById('element-between').value;
-    arrayBetween = (arrayBetween.toString()).split(',');
-    fromPosBetween = arrayBetween[0];
-    toPosBetween = arrayBetween[1];
-    fromPositionToAnotherBetween(fromPosBetween,toPosBetween);
+    const arrayBetween = (document.getElementById('element-between').value).split(',');
+    fromPositionToAnotherBetween(arrayBetween[0],arrayBetween[1]);
     displayArrayBetween();
 }
 function fromPositionToAnotherBetween(fromPositionBetween,toPositionBetween) {
