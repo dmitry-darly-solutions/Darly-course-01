@@ -4,6 +4,7 @@
     <meta charset="utf-8"/>
     <title>JS</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 <div id ="accordionContainer">
@@ -81,6 +82,13 @@
         <div class="panel">
             <button class="accordion"> Object properties</button>
             <div class="panel">
+                <input type="text" id="object-prop-input">
+                <button id="object-prop-add">Add</button>
+                <button id="object-prop-show">Show properties</button>
+                <div class="result">
+                    <span>Properties:</span>
+                    <span id="result-object-prop"></span>
+                </div>
             </div>
             <button class="accordion"> Reading status</button>
             <div class="panel">
