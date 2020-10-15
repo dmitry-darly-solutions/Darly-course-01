@@ -4,6 +4,7 @@
     <meta charset="utf-8"/>
     <title>JS</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 <div id ="accordionContainer">
@@ -84,6 +85,20 @@
             </div>
             <button class="accordion"> Reading status</button>
             <div class="panel">
+                <div>
+                    Enter the author:title:readingStatus
+                    (enter property which value you want to show,
+                    i.e author and press "Show All By")
+                </div>
+                </br>
+                <input type="text" id="object-reading-input">
+                <button id="object-reading-add">Add Book</button>
+                <button id="object-reading-show">Show All By</button>
+                <div class="result">
+                    <span id="result-object-reading-property">*:</span>
+                    <span id="result-object-reading"></span>
+                </div>
+
             </div>
             <button class="accordion"> Url parse</button>
             <div class="panel">
