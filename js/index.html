@@ -4,7 +4,6 @@
     <meta charset="utf-8"/>
     <title>JS</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 <div id ="accordionContainer">
@@ -97,14 +96,14 @@
                 <label for="object-reading-input-reading" name="readingStatus"
                        checked>"Reading</label>
 
-                <button id="object-reading-add">Add Book</button>
+                <button id="object-reading-add"onclick="addBook()">Add Book</button>
                 <span> Show all by
                 <select name="properties" id="object-reading-list">
                     <option value="author">author</option>
                     <option value="title">title</option>
                     <option value="readingStatus">status</option>
                 </select>
-                <button id="object-reading-show">Apply</button>
+                <button id="object-reading-show" onclick="sortProperty()">Apply</button>
                 <div class="result">
                     <span id="result-object-reading-property">*:</span>
                     <span id="result-object-reading"></span>
