@@ -86,14 +86,25 @@
             <button class="accordion"> Reading status</button>
             <div class="panel">
                 <div>
-                    Enter the author:title:readingStatus
-                    (enter property which value you want to show,
-                    i.e author and press "Show All By")
+                    Choose which property values you want to show,
+                    i.e author and press "Apply")
                 </div>
                 </br>
-                <input type="text" id="object-reading-input">
+                <input type="text" id="object-reading-input-author" placeholder="author">
+                <input type="text" id="object-reading-input-title" placeholder="title">
+                <input type="checkbox" id="object-reading-input-reading" name="readingStatus"
+                       checked>
+                <label for="object-reading-input-reading" name="readingStatus"
+                       checked>"Reading</label>
+
                 <button id="object-reading-add">Add Book</button>
-                <button id="object-reading-show">Show All By</button>
+                <span> Show all by
+                <select name="properties" id="object-reading-list">
+                    <option value="author">author</option>
+                    <option value="title">title</option>
+                    <option value="readingStatus">status</option>
+                </select>
+                <button id="object-reading-show">Apply</button>
                 <div class="result">
                     <span id="result-object-reading-property">*:</span>
                     <span id="result-object-reading"></span>
