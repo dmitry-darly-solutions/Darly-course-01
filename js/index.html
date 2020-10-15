@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>JS</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+<div id ="accordionContainer">
+    <div class="accordionSegment">
+        <button class="accordion"> Arrays</button>
+        <div class="panel">
+            <button class="accordion"> Join all elements</button>
+                <div class="panel">
+                    <input type="text" id="element-join">
+                    <button onclick="addElementToArray();">Add</button>
+                    <button onclick="addSeparator();">Separator</button>
+                    <button onclick="displayArray();">Display</button>
+                    <div class="result">
+                        <span>Result array:</span>
+                        <span id="result-element-join"></span>
+                    </div>
+                </div>
+            <button class="accordion">Sum of two</button>
+            <div class="panel">
+                <input type="text" id="element-sum">
+                <button onclick="addElementToArrayFirst();">Add to first</button>
+                <button onclick="addElementToArraySecond();">Add to second</button>
+                <button onclick="displayArrayAll();">Display sum</button>
+                <div class="result">
+                    <span>1 array:</span><span id="result-sum-1"></span>
+                </div>
+                <div class="result">
+                    <span>2 array:</span><span id="result-sum-2"></span>
+                </div>
+                <div class="result">
+                    <span>+ array:</span><span id="result-element-sum"></span>
+                </div>
+            </div>
+            <button class="accordion">Move an element</button>
+            <div class="panel">
+                <input type="text" id="element-move">
+                <button onclick="addElementToArrayMove();">Add</button>
+                <button onclick="moveElement();">Move(From,To)</button>
+                <div class="result">
+                    <span>Before array:</span><span id="move-before"></span>
+                </div>
+                <div class="result">
+                    <span>After array:</span><span id="move-after"></span>
+                </div>
+            </div>
+            <button class="accordion">Merge two arrays(set)</button>
+            <div class="panel">
+                <input type="text" id="element-merge">
+                <button onclick="addElementFirstMerge();">Add to first</button>
+                <button onclick="addElementSecondMerge();">Add to second</button>
+                <button onclick="displayArrayMerge();">Merge</button>
+                <div class="result">
+                    <span>1 array:</span><span id="result-merge-1"></span>
+                </div>
+                <div class="result">
+                    <span>2 array:</span><span id="result-merge-2"></span>
+                </div>
+                <div class="result">
+                    <span>& array:</span><span id="result-merge"></span>
+                </div>
+            </div>
+            <button class="accordion">Array between two integers</button>
+            <div class="panel">
+                <input type="text" id="element-between">
+                <button onclick="createArrayBetween();">Create(From,To)</button>
+                <div class="result">
+                    <span>Array:</span><span id="array-between"></span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="accordionSegment">
+        <button class="accordion">Object methods</button>
+        <div class="panel">
+            <button class="accordion"> Object properties</button>
+            <div class="panel">
+            </div>
+            <button class="accordion"> Reading status</button>
+            <div class="panel">
+            </div>
+            <button class="accordion"> Url parse</button>
+            <div class="panel">
+            </div>
+            <button class="accordion"> Copy key-values reverse</button>
+            <div class="panel">
+            </div>
+            <button class="accordion"> Check is it DOM element</button>
+            <div class="panel">
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src = "scripts/common/accordion.js"></script>
+<script src="scripts/arrays/merge-two-arrays.js"></script>
+<script src="scripts/arrays/move-an-element.js"></script>
+<script src="scripts/arrays/join-all.js"></script>
+<script src="scripts/arrays/sum-of-two.js"></script>
+<script src="scripts/arrays/array-between-two-int.js"></script>
+<script src = "scripts/object-methods/object-properties.js"></script>
+<script src = "scripts/object-methods/reading-status.js"></script>
+<script src = "scripts/object-methods/url-parse.js"></script>
+<script src = "scripts/object-methods/copy-key-values-reverse.js"></script>
+<script src = "scripts/object-methods/check-is-it-dom-element.js"></script>
+</body>
+</html>

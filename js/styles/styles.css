@@ -17,14 +17,13 @@
 }
 .panel {
     margin-top: 10px;
-    background-color: #555;
     height: 0;
     transition: max-height 1s linear,padding 1s linear;
     overflow: hidden;
     background: #ccccff;
 }
 #accordionContainer .show {
-    height: 100px;
+    height: calc(100% + 100px);
     padding: 50px;
 }
 .result{
