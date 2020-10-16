@@ -1,6 +1,6 @@
 const newObject = {};
+const reversedObject = {};
 let newObjectString = '';
-let reversedObject = {};
 function addObject() {
     newObjectString = '';
     const result = document.getElementById('reverse-input').value.split(',');
