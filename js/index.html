@@ -4,7 +4,6 @@
     <meta charset="utf-8" />
     <title>JS</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
     <div id="accordionContainer">
@@ -76,30 +75,36 @@
                 </div>
             </div>
         </div>
-        <div class="accordionSegment">
-            <button class="accordion">Object methods</button>
+    <div class="accordionSegment">
+        <button class="accordion">Object methods</button>
+        <div class="panel">
+            <button class="accordion"> Object properties</button>
             <div class="panel">
-                <button class="accordion"> Object properties</button>
-                <div class="panel">
+                <input type="text" id="object-prop-input">
+                <button id="object-prop-add">Add</button>
+                <button id="object-prop-show">Show properties</button>
+                <div class="result">
+                    <span>Properties:</span>
+                    <span id="result-object-prop"></span>
                 </div>
-                <button class="accordion"> Reading status</button>
-                <div class="panel">
+            </div>
+            <button class="accordion"> Reading status</button>
+            <div class="panel">
+            </div>
+            <button class="accordion"> Url parse</button>
+            <div class="panel">
+                <input type="text" id="object-parse-input" placeholder="Enter or paste URL">
+                <button id="object-parse" onclick="parseURL()">Parse</button>
+                <div class="result">
+                    <span id="object-parse-property">Result:</span>
+                    <span id="object-parse-result"></span>
                 </div>
-                <button class="accordion"> Url parse</button>
-                <div class="panel">
-                    <input type="text" id="object-parse-input" placeholder="Enter or paste URL">
-                    <button id="object-parse" onclick="parseURL()">Parse</button>
-                    <div class="result">
-                        <span id="object-parse-property">Result:</span>
-                        <span id="object-parse-result"></span>
-                    </div>
-                </div>
-                <button class="accordion"> Copy key-values reverse</button>
-                <div class="panel">
-                </div>
-                <button class="accordion"> Check is it DOM element</button>
-                <div class="panel">
-                </div>
+            </div>
+            <button class="accordion"> Copy key-values reverse</button>
+            <div class="panel">
+            </div>
+            <button class="accordion"> Check is it DOM element</button>
+            <div class="panel">
             </div>
         </div>
     </div>
