@@ -98,6 +98,17 @@
             </div>
             <button class="accordion"> Copy key-values reverse</button>
             <div class="panel">
+                <input type="text" id="reverse-input">
+                <button id="reverse-add" onclick="addObject()">Add</button>
+                <button id="reverse-show" onclick="copyReverse()" >Copy reverse</button>
+                <div class="result">
+                    <span>Object before:</span>
+                    <span id="reverse-before"></span>
+                </div>
+                <div class="result">
+                    <span>Object after:</span>
+                    <span id="reverse-after"></span>
+                </div>
             </div>
             <button class="accordion"> Check is it DOM element</button>
             <div class="panel">
