@@ -1,19 +1,13 @@
 function parseURL() {
     const inputUrl = document.getElementById('object-parse-input').value;
     const result = inputUrl.match(/((^\w{2,5}:)\/{2}(([А-Яа-я\w-\.]+):?([0-9]{0,5})))(\/?[А-Яа-я\w-\.\/]+)/);
-    const host = result[3];
-    const hostname = result[4];
-    const href = inputUrl;
-    const origin = result[1];
-    const pathname = result[6];
-    const port = result[5];
-    const protocol = result[2];
-    document.getElementById('object-parse-result').innerHTML = `<div>host: ${host}<\div>
-                                                                <div>hostname: ${hostname}<\div>
-                                                                <div>href: ${href}<\div>
-                                                                <div>origin: ${origin}<\div>
-                                                                <div>pathname: ${pathname}<\div>
-                                                                <div>port: ${port}<\div>
-                                                                <div>protocol: ${protocol}<\div>`;
-    console.log("logging");
+    const host = `<div>host: ${result[3]}<\div>`;
+    const hostname = `<div>hostname: ${result[4]}<\div>`;
+    const href = `<div>href: ${result[0]}<\div>`;
+    const origin = `<div>origin: ${result[1]}<\div>`;
+    const pathname = `<div>pathname: ${result[6]}<\div>`;
+    const port = `<div>port: ${result[5]}<\div>`;
+    const protocol = `<div>protocol: ${result[2]}<\div>`;
+    document.getElementById('object-parse-result').innerHTML = `${host}${hostname}${href}${origin}
+    ${pathname}${port}${protocol}`;
 }
