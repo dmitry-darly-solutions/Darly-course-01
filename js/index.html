@@ -75,7 +75,6 @@
                 </div>
             </div>
         </div>
-
     </div>
     <div class="accordionSegment">
         <button class="accordion">Object methods</button>
@@ -92,6 +91,28 @@
             </div>
             <button class="accordion"> Reading status</button>
             <div class="panel">
+                <div class="reading-text">
+                    Choose which property values you want to show,
+                    i.e author and press "Apply"
+                </div>
+                <input type="text" id="object-reading-input-author" placeholder="author">
+                <input type="text" id="object-reading-input-title" placeholder="title">
+                <input type="checkbox" id="object-reading-input-reading" name="readingStatus"
+                       checked>
+                <label for="object-reading-input-reading" name="readingStatus"
+                       checked>"Reading</label>
+                <button onclick="addBook()">Add Book</button>
+                <span> Show all by</span>
+                <select name="properties" id="object-reading-list">
+                    <option value="author">author</option>
+                    <option value="title">title</option>
+                    <option value="readingStatus">status</option>
+                </select>
+                <button onclick="sortProperty()">Apply</button>
+                <div class="result">
+                    <span id="result-object-reading-property">*:</span>
+                    <span id="result-object-reading"></span>
+                </div>
             </div>
             <button class="accordion"> Url parse</button>
             <div class="panel">
@@ -104,7 +125,6 @@
             </div>
         </div>
     </div>
-
 </div>
 <script src = "scripts/common/accordion.js"></script>
 <script src="scripts/arrays/merge-two-arrays.js"></script>
