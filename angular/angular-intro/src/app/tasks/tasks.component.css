@@ -1,0 +1,22 @@
+input[type=checkbox]:checked + label.strikethrough{
+  text-decoration: line-through;
+  opacity:0.33;
+}
+.task {
+  margin-top: 10px;
+}
+.tasksQuantity {
+  min-height: 90px;
+}
+.enterTask {
+  margin-bottom:10px ;
+}
+.deleteOne {
+  border: 2px solid red;
+  border-radius: 100%;
+  width:20px;
+  height:20px;
+}
+.deleteOne :hover {
+  cursor: pointer;
+}
