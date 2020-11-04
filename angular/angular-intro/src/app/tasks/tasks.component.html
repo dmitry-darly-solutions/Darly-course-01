@@ -1,0 +1,24 @@
+<h3>ToDo List</h3>
+<div class="tasksQuantity">
+  <input type="checkbox" name = "completeDecompleteAll" id = "completeDecompleteAll"
+         (change)="completeDecompleteAll()">
+  <label  for = "completeDecompleteAll">Complete/Decomplete</label>
+  <br>
+  <span class = "deleteOne" (click)="deleteAll()">-x-</span>
+  <span>Delete all</span>
+  <p *ngIf = "tasks.length">
+    Total: {{tasks.length}}{{tasks.length > 1 ? ' tasks' : ' task' }} <br>
+    Active: {{returnLeft()}} <br>
+    Finished: {{completed}} <br>
+  </p>
+</div>
+<input type="text" class="enterTask" (keyup.enter)="addTask($event)">
+<div class = "task" *ngFor="let task of tasks">
+  <input class = "checkbox" type="checkbox" [name] = "task.id" (change)="completeDecompleteOne(task)">
+  <label class="strikethrough"
+         [for]="task.id"
+         contenteditable="true"
+  >{{task.taskDescription}} </label>
+  <span class = "deleteOne" (click)="deleteOne(task)">-x-</span>
+</div>
+
